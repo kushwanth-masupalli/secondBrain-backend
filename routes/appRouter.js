@@ -3,7 +3,7 @@ const {addIntent,getAllIntents,getIntentsByCategory,getIntentsOnOrBeforeDate,del
 
 const router = express.Router()
 
-router.route('/add').post(addIntent);
+router.route('/add').post(addIntent); 
 router.route('/getAll').get(getAllIntents);
 router.route('/getByCategory').post(getIntentsByCategory);
 router.route('/getByDate').post(getIntentsOnOrBeforeDate);
