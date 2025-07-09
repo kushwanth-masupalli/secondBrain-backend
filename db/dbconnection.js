@@ -4,7 +4,9 @@ const connectDB = async () => {
   const uri = process.env.MONGO_URI;
 
   if (!uri) {
-    console.error("❌ MONGO_URI not found in .env file");
+    // console.error("❌ MONGO_URI not found in .env file");
+    res.status(401);
+    throw new Error("database is not connected");
     process.exit(1);
   }
 

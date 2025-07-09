@@ -17,7 +17,7 @@ async function testGroq(command) {
 
 Extract the fields intent, description, and date from the input text.
 
-- The date must be in "dd-mm-yyyy" format.
+- The date must be in "dd/mm/yyyy" format.
 - The intent must be one of: quiz, assignment, meeting, hackathon, other.
 - If intent cannot be identified, use "other".
 - The description should summarize the event briefly.

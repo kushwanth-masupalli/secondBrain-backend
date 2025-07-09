@@ -1,8 +1,6 @@
 require("dotenv").config();
 const express = require("express");
 const connectDB = require("./db/dbconnection");
-const getIntentFromLLM = require("./llm_output");
-const Intent = require("./db/intentModel");
 const router = require('./routes/appRouter')
 const app = express();
 const errorHandler = require('./middleware/errorHandler')
@@ -10,7 +8,7 @@ app.use(express.json());
 //connecting to the database
 connectDB();
 //routing 
-app.use(router);
+app.use('/api',router);
 //middleware for error handling
 app.use(errorHandler);
 
