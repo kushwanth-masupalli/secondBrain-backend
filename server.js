@@ -4,10 +4,8 @@ const connectDB = require("./db/dbconnection");
 const router = require('./routes/appRouter')
 const app = express();
 const errorHandler = require('./middleware/errorHandler')
-app.use(cors({
-  origin: 'http://localhost:5173'
-}));
-
+const cors = require('cors');
+app.use(cors());
 
 
 app.use(express.json());
